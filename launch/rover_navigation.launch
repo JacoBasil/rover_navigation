@@ -2,4 +2,5 @@
 	<arg name="map_file" default="$(find rover_slam)/maps/map1.yaml" />
 	<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" />
 	<include file="$(find rover_navigation)/launch/amcl.launch" />
+	<include file="$(find rover_navigation)/launch/move_base.launch" />
 </launch>
