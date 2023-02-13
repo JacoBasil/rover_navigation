@@ -19,4 +19,4 @@ obstacles:
 		inf_is_valid: true
 
 inflation:
-	inflation_radius: 1.0
+	inflation_radius: 0.2
