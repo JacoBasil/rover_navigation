@@ -1,6 +1,8 @@
 <launch>
-	<arg name="map_file" default="$(find rover_slam)/maps/map1.yaml" />
+	<arg name="map_file" default="$(find rover_slam)/maps/map2.yaml" />
 	<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" />
 	<include file="$(find rover_navigation)/launch/amcl.launch" />
 	<include file="$(find rover_navigation)/launch/move_base.launch" />
+	<include file="$(find aruco_ros)/launch/single.launch" />
+	<node pkg="rover_navigation" type="move_goal_send_start" name="move_goal_send_node" />
 </launch>
